@@ -25,8 +25,13 @@ public class Bankapplication {
                 case 2:
                     System.out.println("Enter the amount to be withdrawal: ");
                     double withdrawAmount = scan.nextDouble();
+                    if (withdrawAmount<accountBalance){
                     accountBalance = cashWithdrawal(withdrawAmount,accountBalance);
                     System.out.println("Rs:" + withdrawAmount + " is withdraw successfully");
+                    }
+                    else{
+                        System.out.println("Insuffiecient account balance");
+                    }
                     break;
 
                 case 3:
